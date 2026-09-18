@@ -128,7 +128,7 @@ The `#code` environment renders a syntax-highlighted code block with a header
 bar, optional line numbers, and optional language label. It is numbered like
 other theorem environments (1.1, A.1, ...).
 
-```typst
+````typst
 #code(caption: "Bubble Sort")[
 ```python
 def bubble_sort(arr):
@@ -139,7 +139,7 @@ def bubble_sort(arr):
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 ```
 ]
-```
+````
 
 Optional parameters:
 
