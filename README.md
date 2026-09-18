@@ -89,10 +89,6 @@ Numbering format:
 - **appendix**: `A.1`, `A.1.1`, ... (letter.section.subsection)
 - **frontmatter / backmatter**: no heading numbering
 
-## Outline
-
-Call `#outline()` anywhere in your document (usually in the frontmatter) to
-generate a table of contents. Entries are paginated and hyperlinked.
 
 ## Theorem Environments
 
@@ -149,26 +145,7 @@ Optional parameters:
 | `lineno` | `true` | Show line numbers |
 | `show-language` | `true` | Show detected language in the header |
 
-## Figures, Tables, Equations
 
-Figures and tables use Typst's built-in `#figure()` and `#table()`.
-Equations use `$...$` blocks or `#math.equation()`. All are automatically
-numbered per chapter:
-
-- mainmatter: **Figure 1.1**, **Table 1.1**, **(1.1)**
-- appendix: **Figure A.1**, **Table A.1**, **(A.1)**
-
-```typst
-#figure(image("diagram.png"), caption: "System architecture") <fig:arch>
-
-$
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$ <eq:quadratic>
-
-See @fig:arch for the layout and @eq:quadratic for the formula.
-```
-
-References are rendered as blue clickable links with the proper numbering.
 
 ### Subfigures
 
@@ -212,26 +189,12 @@ Bibliography uses Chicago author-date style:
 #bibliography("refs.bib")
 ```
 
-## Additional Utilities
 
-| Function | Description |
-|----------|-------------|
-| `#within-section[Title]` | Unnumbered centered sub-heading |
-| `#diary[Body]` | Diary-style paragraph with no first-line indent |
-| `#poem[Body]` | Poem block with a left indent |
+## Tutorial
 
-## Music — Mode Wheel
+For more information, see the template file `template/main.typ`.
 
-`#mode-wheel` draws a circular musical mode wheel highlighting the given
-scale degrees. Requires the [`@preview/cetz`](https://typst.app/pkg/cetz)
-package.
 
-```typst
-#import "@preview/cetz:0.5.2"
-#import "@preview/latex-doc:0.0.1": mode-wheel
-
-#mode-wheel(scale-notes: (0, 2, 4, 7, 9))  // C major pentatonic
-```
 
 ## License
 
