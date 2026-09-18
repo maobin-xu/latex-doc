@@ -4,6 +4,8 @@ A LaTeX-style book template for Typst. Provides part/chapter/section structure,
 frontmatter/mainmatter/appendix/backmatter book parts, theorem environments,
 subfigures, Harvard-style citations, and bibliography.
 
+> **Version:** 0.0.1 · **Updated:** 2026-09-18
+
 ## Quick Start
 
 ```typst
@@ -17,10 +19,15 @@ subfigures, Harvard-style citations, and bibliography.
   titlepage: true,
 )
 
+// Front matter: roman page numbers, no heading numbering
 #frontmatter()
 = Foreword
 Some text...
 
+// Insert table of contents here
+#content()
+
+// Main matter: arabic page numbers, Part/Chapter numbering, counters reset
 #mainmatter()
 = Part I
 == Chapter 1
@@ -29,14 +36,17 @@ Some text in Chapter 1.
 == Chapter 2
 More text.
 
+// Appendix: chapters labeled A, B, C...
 #appendix()
 = Appendix A
 Appendix content.
 
+// Back matter: no heading numbering
 #backmatter()
 = Afterword
 Closing remarks.
 
+// Bibliography (Chicago author-date style)
 #bibliography("refs.bib")
 ```
 
