@@ -1,4 +1,4 @@
-# latex-doc
+# latexy-book
 
 A LaTeX-style book template for Typst. Provides part/chapter/section structure,
 frontmatter/mainmatter/appendix/backmatter book parts, theorem environments,
@@ -9,7 +9,7 @@ subfigures, citations, and bibliography.
 ## Quick Start
 
 ```typst
-#import "@preview/latex-doc:0.0.1": book, frontmatter, mainmatter, appendix, backmatter
+#import "@preview/latexy-book:0.0.1": book, frontmatter, mainmatter, appendix, backmatter
 
 #show: book.with(
   title: "Book Title",
